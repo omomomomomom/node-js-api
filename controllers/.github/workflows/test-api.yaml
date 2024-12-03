@@ -13,7 +13,7 @@ jobs:
         mongo:
           image: mongo
     steps:
-      - name: install curl
+      - name: install curl 02
         run: |
          apt-get -y update
          apt-get -y install curl  
