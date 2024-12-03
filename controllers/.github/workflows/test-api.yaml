@@ -1,0 +1,25 @@
+name: test api
+on: [push, workflow_dispatch]
+
+jobs:
+  test-api:
+    runs-on: ubuntu-lates
+    container:
+      service:
+        app:
+          images: alialaa17/simple-node-api
+          env:
+            MONGO_HOSTNAME: mongo
+        mongo:
+          image: mongo
+    steps:
+      - name: install curl
+        run: |
+         apt-get -y update
+         apt-get -y install curl  
+      - name: Dump Services Context
+        run: echo '${{ toJson(job.services) }}'
+      - name: Post a user
+        run: 'curl -X POST http://app:3000/api/users -H ''Content-Type: application/json'' -d ''{"username": "hello","address": "dwded"}'''
+      - name: Get Users
+        run: curl http://app:3000/api/users         
