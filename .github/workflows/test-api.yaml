@@ -7,7 +7,7 @@ jobs:
     container:
     services:
         app:
-          images: alialaa17/simple-node-api
+          image: alialaa17/simple-node-api
           env:
             MONGO_HOSTNAME: mongo
         mongo:
