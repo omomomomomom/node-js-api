@@ -5,7 +5,7 @@ jobs:
   test-api:
     runs-on: ubuntu-lates
     container:
-      services:
+    services:
         app:
           images: alialaa17/simple-node-api
           env:
