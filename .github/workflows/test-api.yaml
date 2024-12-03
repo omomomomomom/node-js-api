@@ -3,7 +3,7 @@ on: [push, workflow_dispatch]
 
 jobs:
   test-api:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     container:
     services:
         app:
