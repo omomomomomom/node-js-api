@@ -1,0 +1,10 @@
+name: test workflow
+on: [push]
+jobs:
+  job 01:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test action 1
+        run: |
+          echo $GITHUB_SHA
+      - uses: actions/checkoutv3
