@@ -4,7 +4,7 @@ jobs:
   job 01:
     runs-on: ubuntu-latest
     steps:
-      - name: test action 1
+      - name: test actiocn 1
         run: |
           echo $GITHUB_SHA
       - uses: actions/checkoutv3
